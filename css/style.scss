@@ -1,0 +1,59 @@
+//Colors
+$darkGray: #1a1a1a;
+$darkRed: #b1060f;
+$lightRed: #e50913;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: $darkGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    background-color: $darkRed;
+    height: 250px;
+    width: 60px;
+    position: relative;
+
+    &::before{
+        content: '';
+        background-color: $darkRed;
+        height: 250px;
+        width: 60px;
+
+        position: absolute;
+        left: 90px;
+    }
+
+    &::after{
+        content: '';
+        background-color: $darkGray;
+        height: 20px;
+        width: 175px;
+        border-radius: 50%;
+
+        position: absolute;
+        left: -15px;
+        bottom: -10px;
+    }
+
+    span{
+        height: 250px;
+        width: 60px;
+        background-color: $lightRed;
+        box-shadow: 0 0 10px -4px;
+        transform: skew(20deg);
+
+        position: absolute;
+        left: 46px;
+    }
+}
